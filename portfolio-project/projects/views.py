@@ -1,5 +1,6 @@
 from django.shortcuts import render
-
+from .models import Project
 # Create your views here.
 def adnan(request):
-    return render(request,'projects/adnan.html')
+    projects = Project.objects
+    return render(request,'projects/home.html', {'projects':projects})
